@@ -3,52 +3,181 @@ header{
     justify-content: center;
     font-family:cursive;
     font-size: x-large;
-    background-color: snow;
-    border-radius: 88px;
+    background-color: #eef7f9;
+    margin: 0px;
 }
 
 .main{
-    display: flex;
-    gap: 22px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     justify-content: flex-start;
+
+}
+
+.navbar {
+    border-radius: 10px;
+    background-color:#eef7f988;
+    display: flex;
+    overflow: visible;
+    position: sticky;
+    top: 0.4em;
+    z-index: 1;
+}
+
+.sidebar{   
+    width: 100px;
+    height: 1200px;
+    border-radius: 8px;
+    display: block;
     padding: 10px;
-    margin: 5px 10px 5px 10px;
+    border: 0.2em #eef7f9;
+    border-style: solid;
+    position: sticky;
+    top: 3em;
+    
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    font-size: inherit;
+    font-family:inherit ;
+    color:darkslategray;
+    margin: 0;
+    
+}
+
+.dropbtn1{
+    border: none;
+    outline: none;
+    font-size: inherit;
+    background-color:inherit;
+    font-family:inherit ;
+    color:darkslategray;
+    margin: 0;   
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color:darkslategray;
+    padding: 12px 16px;
+}
+
+.navbar a:hover {
+    display: block;
+    border-radius: 10px;
+    background-color: rgba(206, 220, 247, 0.377);
+} 
+
+.dropdown:hover{
+    border-radius: 10px;
+    background-color: rgba(206, 220, 247, 0.377);
+}
+
+.dropbtn1 {
+    margin: 0;
+    padding: 12px 16px;
+    color: darkslategrey;
+}
+
+.dropbtn1:hover .sub-menu1{
+    display: grid;
+}
+
+.sub-menu1 {
+    background-color: #eef7f9;
+    display: none;
+    border-radius: 20px;
+    position: absolute;
+    padding: 12px 16px;
+    color: darkslategrey;   
+}
+
+.sub-menu1 h4{
+    user-select: none;
+    margin: 0.2em;
+    padding: 5px;
+}
+
+.sub-menu1 :hover {
+    background-color: rgba(206, 220, 247, 0.377);
+    border-radius: 10px;    
+}
+
+.sub-menu1:hover .list1{
+    display: block;
+}
+
+.list1 li:hover{
+    padding-left: 0.5em;
+}
+
+.dropdown:hover .sub-menu1 {
+    display: grid;
+}
+
+.list1{
+    list-style-type: none;
+    padding: 1em;
+    display: none;
+}
+
+.list1 li{
+    padding: 0.2em;
+}
+
+.sub-menu1 {
+    background-color: #eef7f9;
+    display: none;
+    border-radius: 20px;
+    position: absolute;
+    padding: 12px 16px;
+    color: darkslategrey;
+}
+
+.dropdown:hover .sub-menu1{
+    display: grid;
+}
+
+
+.list2 {
+    list-style-type: none;
+    padding: 1em;
+    display: none;
+}
+
+.list2 li{
+    padding: 0.2em;
+}
+
+.sub-menu2:hover .list2{
+    display: grid;
 }
 
 .d1{
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0.2em
+}
+
+.sidebar a {
+    color:gray;
+    text-decoration: none;
+}
+
+.sidebar a:hover{
+    background-color:#eef7f9 ;
 }
 
 .d2{
-    display: flex;
-    justify-content: center;
-}
-
-.d3{
-    background-color: snow;
-    border-radius: 22px;
-    padding: 50px 10px 50px 10px ;
-}
-
-.d3 a:hover{
-    background-color:rgb(209, 228, 245) ;
-}
-
-.d4{
     border-radius: 20px;
-    box-shadow: 0px 0px 4px;
+    box-shadow: 0.05em 0.04em  0.2em #eef7f9;
     padding: 10px 20px 10px 20px;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
-    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
 }
 
-.d4>h1{
+.d2 h1{
     color:steelblue;
 }
 
@@ -57,35 +186,91 @@ h2{
     font-weight: 20;
 }
 
-table{ 
-    align-items: center;
-    text-align: center;
-    padding: 5px;
+.appointment {
+    margin-top: 2em;
+    border-radius: 2em;
+    box-shadow: 0.01em 0.01em 0.2em;
+    padding: 2em;
 }
 
-select{
-    background-color:snow;
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.appointment h2 {
+    background-color: #eef7f9;
+    padding: 0.5em;
+    
+}
+
+.appointment fieldset {
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.appointment select, input {
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.appointment textarea{
+    width: 350px;
+    height: 100px;
+}
+
+.appointment select:hover{
+    background-color: #eef7f9;
+    box-shadow: 0.1em 0.1em 0.8em #238297;
+}
+
+.appointment input:hover{
+    background-color: #eef7f9;
+    box-shadow: 0.1em 0.1em 0.8em #238297;
+}
+
+.appointment textarea:hover{
+    background-color: #eef7f9;
+    box-shadow: 0.1em 0.1em 0.8em #238297;
+}
+
+.appointment a {
+    background-color: #eef7f9;
+    border-radius: 1em;
+    text-decoration: none;
     font-size: large;
-    font-style: italic;
-    letter-spacing: 5px;
+    color: #099750;
+    display: flex; 
+    justify-content: center;
+    padding: 2em;
 }
 
-select:hover{
-    background-color: rgb(209, 228, 245) ;
+.appointment a:hover {
+    background-color: white;
 }
 
-footer p{
+footer {
+    margin-top: 1em;
     font-size: large;
-    background-color: snow;
-    border-radius: 22px;
+    background-color: #eef7f9;
+    display: grid;
+    justify-content: center;
+}
+
+footer div {
+    padding: 2em;
+}
+
+footer a,p {
+    padding: 1em;
     display: flex;
+    align-items:end;
     justify-content: center;
 }
 
-footer a {
-    display:flex;
-    justify-content: center;
+@media only screen and (max-width: 600px)
+{
+    .navbar{
+        font-size: small;
+        gap: 8px;
+    }
+
+    .d2 {
+        padding: 0;
+    }
 }
